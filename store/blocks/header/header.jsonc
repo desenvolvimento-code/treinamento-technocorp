@@ -1,0 +1,181 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "children": [
+      "flex-layout.row#notification-bar",
+      "flex-layout.row#menu-topo",
+      "sticky-layout#topo-fixo"
+    ]
+  },
+  
+  // BARRA DE NOTIFICAÇÃO
+  "flex-layout.row#notification-bar": {
+    "props": {
+      "blockClass": "notification-bar",
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "rich-text#notification-bar"
+    ]
+  },
+  "rich-text#notification-bar":{
+    "props":{
+      "blockClass": "notification-bar",
+      "text":"Ganhe 15% OFF válido para as 100 primeiras compras! Use o cupom **SUMMER100**"
+    }
+  },
+
+  // MENU DO TOPO
+  "flex-layout.row#menu-topo":{
+    "props": {
+      "blockClass": "menu-topo",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#menu-topo"
+    ]
+  },
+  "flex-layout.col#menu-topo":{
+    "props": {
+      "blockClass":"menu-topo"
+    },
+    "children": [
+      "flex-layout.row#menu-topo-content"
+    ]
+  },
+  "flex-layout.row#menu-topo-content":{
+    "children": [
+      "flex-layout.col#menu-topo-content",
+      "flex-layout.col#spacer",
+      "flex-layout.col#icones-topo"
+    ]
+  },
+  "flex-layout.col#menu-topo-content":{
+    "children": [
+      "vtex.menu@2.x:menu#menu-topo"
+    ]
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.col#icones-topo":{
+    "children": [
+      "login",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass":"icones-topo"
+    }
+  },
+  "login": {
+    "props": {
+      "emailAndPasswordTitle": "Acesse a loja",
+      "accessCodeTitle": "Login por código de acesso",
+      "emailPlaceholder": "E-mail",
+      "passwordPlaceholder": "Senha",
+      "optionsTitle":"Escolha uma forma de acessar",
+      "showIconProfile":true,
+      "iconLabel":"Entre ou cadastre-se"
+    }
+  },
+
+  "sticky-layout#topo-fixo": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#topo-fixo"]
+  },
+  "flex-layout.row#topo-fixo": {
+    "props": {
+      "blockClass": "main-header",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#category-menu",
+      "flex-layout.col#spacer",
+      "search-bar"
+    ]
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo#desktop"]
+  },
+  "logo#desktop": {
+    "props": {
+      "title": "Summer",
+      "href": "/",
+      "url": "assets/logo-summer.png",
+      "width": "234",
+      "height": "92"
+    }
+  },
+  "flex-layout.col#category-menu": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["vtex.menu@2.x:menu#category-menu"]
+  },
+
+  // MOBILE
+  "header-layout.mobile": {
+    "children": ["sticky-layout#1-mobile"]
+  },
+  "sticky-layout#1-mobile": {
+    "children": ["flex-layout.row#1-mobile"]
+  },
+  "flex-layout.row#1-mobile": {
+    "children": [
+      "drawer",
+      "logo#mobile",
+      "flex-layout.col#spacer",
+      "login",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": ["menu#drawer"]
+  },
+
+  "menu#drawer": {
+    "children": [
+      "menu-item#category-apparel",
+      "menu-item#category-home",
+      "menu-item#more"
+    ],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+
+  "logo#mobile": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo-mobile.png",
+      "width": "77.5",
+      "height": "27.5"
+    }
+  }
+}
