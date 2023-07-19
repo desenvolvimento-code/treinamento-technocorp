@@ -1,3 +1,19 @@
+.flexRow--notification-bar{
+  background: #F1A1A3;
+}
+.flexRow--menu-topo{
+  border-bottom:1px solid #F1A1A3;
+}
+.flexCol--icones-topo{
+  flex-direction:row;
+  gap:37px;
+}
+.flexColChild--icones-topo{
+  display:flex;
+  align-items:center;
+}
+
+
 .flexRowContent--menu-link,
 .flexRowContent--main-header {
   padding: 0 0.5rem;
@@ -22,10 +38,6 @@
   color: #fff;
 }
 
-.flexRowContent--main-header {
-  background-color: #f0f0f0;
-}
-
 .flexRowContent--main-header-mobile {
   align-items: center;
   padding: 0.625rem 0.5rem;
@@ -38,8 +50,24 @@
 }
 
 .flexRowContent--main-header :global(.vtex-menu-2-x-styledLink) {
-  color: #727273;
-  font-size: 14px;
+  color: #4F4242;
+  font-size: 15px;
+}
+.flexRowContent--main-header :global(.vtex-menu-2-x-styledLink--highlight) {
+  color: #F1A1A3;
+}
+.flexRowContent--main-header :global(.vtex-menu-2-x-styledLinkContainer) {
+  margin:0;
+  padding:0 20px;
+}
+.flexRowContent--main-header :global(.vtex-menu-2-x-submenuWrapper) {
+  margin:0;
+  padding:13px 23px;
+  border:0;
+  width:100%;
+}
+.flexRowContent--main-header :global(.vtex-menu-2-x-submenuWrapper) :global(.vtex-menu-2-x-menuContainer) {
+  gap:10px;
 }
 
 .flexRow--deals {

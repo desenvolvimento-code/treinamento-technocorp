@@ -1,0 +1,17 @@
+.container :global(.vtex-button){
+    border:0;
+    min-height: auto;
+}
+.container :global(.vtex-button__label){
+    padding:0 !important;
+}
+.container .profileIcon{
+    overflow:visible;
+}
+.label{
+    color:#4F4242;
+    font:12px "Amiko", sans-serif;
+    text-transform: none;
+    padding-left:0;
+    margin-top:3px;
+}

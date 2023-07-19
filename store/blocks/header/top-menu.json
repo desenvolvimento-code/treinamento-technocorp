@@ -11,6 +11,7 @@
       "type": "custom",
       "iconId": null,
       "highlight": false,
+      "blockClass": "menu-topo",
       "itemProps": {
         "type": "internal",
         "href": "/quem-somos",
@@ -26,6 +27,7 @@
       "type": "custom",
       "iconId": null,
       "highlight": false,
+      "blockClass": "menu-topo",
       "itemProps": {
         "type": "internal",
         "href": "/trocas-e-devolucoes",

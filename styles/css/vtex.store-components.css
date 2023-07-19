@@ -1,3 +1,21 @@
+.searchBarContainer :global(.vtex-input-prefix__group){
+  border:1px solid #EAC3CE;
+  border-radius:25px;
+  flex-direction: row-reverse;
+  height:34px;
+}
+.searchBarContainer{
+  padding:0;
+  display:flex;
+  align-items:center;
+}
+.searchBarContainer :global(.vtex-styleguide-9-x-input){
+  color:#4F4242;
+  font:13px "Amiko", sans-serif;
+  padding:5px;
+}
+
+
 .notificationBarContainer {
   background-color: #e6f1e6;
   color: #03034e;
@@ -7,7 +25,7 @@
 }
 
 .infoCardContainer--info-card-home {
-  max-width: 1520px;
+  max-width: 1300px;
   margin: 0 auto;
   background-color: #e6f1e6;
   padding: 0px;
@@ -15,7 +33,7 @@
 
 .newsletter {
   background-color: #03054e;
-  max-width: 1528px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 

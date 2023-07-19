@@ -36,8 +36,7 @@
   // MENU DO TOPO
   "flex-layout.row#menu-topo":{
     "props": {
-      "blockClass": "menu-topo",
-      "fullWidth": true
+      "blockClass": "menu-topo"
     },
     "children": [
       "flex-layout.col#menu-topo"
@@ -54,9 +53,12 @@
   "flex-layout.row#menu-topo-content":{
     "children": [
       "flex-layout.col#menu-topo-content",
-      "flex-layout.col#spacer",
       "flex-layout.col#icones-topo"
-    ]
+    ],
+    "props": {
+      "blockClass": "menu-topo-content",
+      "colSizing": "auto"
+    }
   },
   "flex-layout.col#menu-topo-content":{
     "children": [
@@ -131,19 +133,40 @@
     },
     "children": ["vtex.menu@2.x:menu#category-menu"]
   },
+  "search-bar":{
+    "blocks": ["autocomplete-result-list.v2"],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "placeholder": "Buscar...",
+      "displayMode": "search-button"
+    }
+  },
+  "autocomplete-result-list.v2": {
+    "props":{
+      "maxSuggestedProducts":2,
+      "productLayout":"HORIZONTAL"
+    },
+    "blocks": [
+      "product-summary.shelf"
+    ]
+  },
 
   // MOBILE
   "header-layout.mobile": {
-    "children": ["sticky-layout#1-mobile"]
-  },
-  "sticky-layout#1-mobile": {
-    "children": ["flex-layout.row#1-mobile"]
-  },
-  "flex-layout.row#1-mobile": {
     "children": [
-      "drawer",
-      "logo#mobile",
-      "flex-layout.col#spacer",
+      "flex-layout.row#notification-bar",
+      "sticky-layout#topo-mobile"
+    ]
+  },
+  "sticky-layout#topo-mobile": {
+    "children": [
+      "flex-layout.row#topo-mobile-1",
+      "flex-layout.row#topo-mobile-2"
+    ]
+  },
+  "flex-layout.row#topo-mobile-1": {
+    "children": [
+      "search-bar",
       "login",
       "minicart.v2"
     ],
@@ -154,28 +177,29 @@
       "fullWidth": true
     }
   },
-  "drawer": {
-    "children": ["menu#drawer"]
-  },
-
-  "menu#drawer": {
+  "flex-layout.row#topo-mobile-2": {
     "children": [
-      "menu-item#category-apparel",
-      "menu-item#category-home",
-      "menu-item#more"
+      "logo#mobile",
+      "flex-layout.col#spacer",
+      "drawer#menu-mobile"
     ],
     "props": {
-      "orientation": "vertical"
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
     }
   },
-
+  "drawer#menu-mobile": {
+    "children": ["vtex.menu@2.x:menu#category-menu"]
+  },
   "logo#mobile": {
     "props": {
-      "title": "Logo",
+      "title": "Summer",
       "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo-mobile.png",
-      "width": "77.5",
-      "height": "27.5"
+      "url": "assets/logo-summer.png",
+      "width": "146",
+      "height": "57"
     }
   }
 }

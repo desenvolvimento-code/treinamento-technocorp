@@ -1,0 +1,237 @@
+{
+  "vtex.menu@2.x:menu#category-menu": {
+    "props": {
+      "experimentalOptimizeRendering": true
+    },
+    "children": [
+      "menu-item#novidades",
+      "menu-item#colecao",
+      "menu-item#feminino",
+      "menu-item#acessorios",
+      "menu-item#clube",
+      "menu-item#summer-sale"
+    ]
+  },
+  "menu-item#novidades": {
+    "props": {
+      "id": "menu-item-novidades",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/novidades",
+        "noFollow": false,
+        "tagTitle": "Novidades",
+        "text": "Novidades"
+      }
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#novidades"
+    ]
+  },
+  "vtex.menu@2.x:submenu#novidades": {
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#novidades"
+    ]
+  },
+  "vtex.menu@2.x:menu#novidades": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#camisetas",
+      "menu-item#calcas",
+      "menu-item#jardineiras",
+      "menu-item#salopetes",
+      "menu-item#bodies",
+      "menu-item#tapa-fralda",
+      "menu-item#ver-tudo"
+    ]
+  },
+  "menu-item#camisetas": {
+    "props": {
+      "id": "menu-item-camisetas",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/novidades/camisetas",
+        "noFollow": false,
+        "tagTitle": "Camisetas",
+        "text": "Camisetas"
+      }
+    }
+  },
+  "menu-item#calcas": {
+    "props": {
+      "id": "menu-item-calcas",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/novidades/calcas",
+        "noFollow": false,
+        "tagTitle": "Calças",
+        "text": "Calças"
+      }
+    }
+  },
+  "menu-item#jardineiras": {
+    "props": {
+      "id": "menu-item-jardineiras",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/novidades/jardineiras",
+        "noFollow": false,
+        "tagTitle": "Jardineiras",
+        "text": "Jardineiras"
+      }
+    }
+  },
+  "menu-item#salopetes": {
+    "props": {
+      "id": "menu-item-salopetes",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/novidades/salopetes",
+        "noFollow": false,
+        "tagTitle": "Salopetes",
+        "text": "Salopetes"
+      }
+    }
+  },
+  "menu-item#bodies": {
+    "props": {
+      "id": "menu-item-bodies",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/novidades/bodies",
+        "noFollow": false,
+        "tagTitle": "Bodies",
+        "text": "Bodies"
+      }
+    }
+  },
+  "menu-item#tapa-fralda": {
+    "props": {
+      "id": "menu-item-tapa-fralda",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/novidades/tapa-fralda",
+        "noFollow": false,
+        "tagTitle": "Tapa Fralda",
+        "text": "Tapa Fralda"
+      }
+    }
+  },
+  "menu-item#ver-tudo": {
+    "props": {
+      "id": "menu-item-ver-tudo",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/novidades",
+        "noFollow": false,
+        "tagTitle": "Ver tudo",
+        "text": "Ver tudo"
+      }
+    }
+  },
+
+  // TERCEIRO ITEM - PRIMEIRO NÍVEL
+  "menu-item#colecao": {
+    "props": {
+      "id": "menu-item-colecao",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/colecao",
+        "noFollow": false,
+        "tagTitle": "Coleção",
+        "text": "Coleção"
+      }
+    }
+  },
+  "menu-item#feminino": {
+    "props": {
+      "id": "menu-item-feminino",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/feminino",
+        "noFollow": true,
+        "tagTitle": "Feminino",
+        "text": "Feminino"
+      }
+    }
+  },
+  "menu-item#acessorios": {
+    "props": {
+      "id": "menu-item-acessorios",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/acessorios",
+        "noFollow": true,
+        "tagTitle": "Acessórios",
+        "text": "Acessórios"
+      }
+    }
+  },
+  "menu-item#clube": {
+    "props": {
+      "id": "menu-item-clube",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/clube",
+        "noFollow": true,
+        "tagTitle": "Clube",
+        "text": "Clube"
+      }
+    }
+  },
+  "menu-item#summer-sale": {
+    "props": {
+      "id": "menu-item-summer-sale",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/summer-sale",
+        "noFollow": true,
+        "tagTitle": "Summer Sale",
+        "text": "Summer Sale"
+      }
+    }
+  }
+}
