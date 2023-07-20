@@ -15,6 +15,21 @@
   padding:5px;
 }
 
+.infoCardContainer--info-card-banners-middle-1{
+  height:100%;
+  align-items:flex-start;
+}
+.infoCardTextContainer--info-card-banners-middle-1{
+  margin:0 0 0 23px;
+}
+.infoCardHeadline--info-card-banners-middle-1{
+  margin-top:30px;
+  color:#251203;
+  font:400 29px "Amiko", sans-serif;
+}
+.imageElement--banner-middle-image{
+  width:100%;
+}
 
 .notificationBarContainer {
   background-color: #e6f1e6;

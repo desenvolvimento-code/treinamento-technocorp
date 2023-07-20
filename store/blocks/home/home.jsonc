@@ -1,38 +1,32 @@
 {
   "store.home": {
     "blocks": [
-      "list-context.image-list#demo",
-      /* You can make references to blocks defined in other files.
-       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
-      "flex-layout.row#deals",
+      "list-context.image-list#banner-principal",
       "__fold__",
       "rich-text#shelf-title",
       "flex-layout.row#shelf",
-      "info-card#home",
-      "rich-text#question",
-      "rich-text#link",
-      "newsletter"
+      "flex-layout.row#banners-middle"
     ]
   },
 
-  "list-context.image-list#demo": {
-    "children": ["slider-layout#demo-images"],
+  "list-context.image-list#banner-principal": {
+    "children": ["slider-layout#banner-principal"],
     "props": {
-      "height": 570,
+      "height": 471,
       "preload": true,
       "images": [
         {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-desktop.png",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-mobile.png"
+          "image": "assets/banner-principal.png",
+          "mobileImage": "assets/banner-principal-mobile.png"
         },
         {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration.png",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration-mobile.png"
+          "image": "assets/banner-principal.png",
+          "mobileImage": "assets/banner-principal-mobile.png"
         }
       ]
     }
   },
-  "slider-layout#demo-images": {
+  "slider-layout#banner-principal": {
     "props": {
       "itemsPerPage": {
         "desktop": 1,
@@ -40,33 +34,34 @@
         "phone": 1
       },
       "infinite": true,
-      "showNavigationArrows": "desktopOnly",
-      "blockClass": "carousel"
+      "showNavigationArrows": "never",
+      "showPaginationDots":"always",
+      "blockClass": "banner-principal"
     }
   },
 
   "rich-text#shelf-title": {
     "props": {
-      "text": "## Summer",
+      "text": "## Recomendamos para você",
       "blockClass": "shelfTitle"
     }
   },
   "flex-layout.row#shelf": {
-    "children": ["list-context.product-list#demo1"]
+    "children": ["list-context.product-list#shelf-home"]
   },
-  "list-context.product-list#demo1": {
+  "list-context.product-list#shelf-home": {
     "blocks": ["product-summary.shelf"],
-    "children": ["slider-layout#demo-products"],
+    "children": ["slider-layout#shelf-home"],
     "props": {
       "orderBy": "OrderByTopSaleDESC"
     }
   },
-  "slider-layout#demo-products": {
+  "slider-layout#shelf-home": {
     "props": {
       "itemsPerPage": {
         "desktop": 4,
         "tablet": 3,
-        "phone": 1
+        "phone": 2
       },
       "infinite": true,
       "fullWidth": false,
@@ -74,31 +69,59 @@
     }
   },
 
-  "info-card#home": {
+  "flex-layout.row#banners-middle":{
+    "children": [
+      "flex-layout.col#banners-middle-1",
+      "flex-layout.col#banners-middle-2"
+    ],
     "props": {
-      "id": "info-card-home",
-      "isFullModeStyle": false,
+      "blockClass": "banners-middle"
+    }
+  },
+  "flex-layout.col#banners-middle-1":{
+    "children": [
+      "info-card#banners-middle-1"
+    ]
+  },
+  "info-card#banners-middle-1": {
+    "props": {
+      "id": "info-card-banners-middle-1",
+      "isFullModeStyle": true,
       "textPosition": "left",
-      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
-      "headline": "Clearance Sale",
-      "callToActionText": "DISCOVER",
-      "callToActionUrl": "/sale/d",
-      "blockClass": "info-card-home",
+      "imageUrl": "assets/home-1.png",
+      "headline": "Encontre o seu <span>Sneakers</span>",
+      "callToActionText": "Próximo Lançamento",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-banners-middle-1"
+    }
+  },
+  "flex-layout.col#banners-middle-2":{
+    "children": [
+      "image#banner-middle-image",
+      "info-card#banners-middle-2"
+    ]
+  },
+  "image#banner-middle-image":{
+    "props": {
+      "src": "assets/home-2.png",
+      "alt": "Home 2",
+      "link": {
+        "url": "/"
+      },
+      "blockClass":"banner-middle-image"
+    }
+  },
+  "info-card#banners-middle-2": {
+    "props": {
+      "id": "info-card-banners-middle-2",
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "assets/home-3.png",
+      "headline": "Novidades Camisetas",
+      "callToActionText": "shop now",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-banners-middle-2",
       "textAlignment": "center"
-    }
-  },
-
-  "rich-text#question": {
-    "props": {
-      "text": "**This is an example store built using the VTEX platform.\nWant to know more?**",
-      "blockClass": "question"
-    }
-  },
-
-  "rich-text#link": {
-    "props": {
-      "text": "\n**Reach us at**\nwww.vtex.com.br",
-      "blockClass": "link"
     }
   }
 }

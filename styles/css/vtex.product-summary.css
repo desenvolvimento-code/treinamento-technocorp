@@ -1,3 +1,8 @@
+.element:hover :global(.vtex-stack-layout-0-x-stackItem--shelf-comprar){
+  display:block;
+}
+
+
 .skuSelectorContainer--quickview .skuSelectorItemImage .frameAround, .skuSelectorContainer--quickview .skuSelectorItemImage .skuSelectorInternalBox {
   border-radius: 50%;
 }
