@@ -3,34 +3,17 @@
     "children": [
       "flex-layout.row#product-breadcrumb",
       "condition-layout.product#availability",
-      "flex-layout.row#description",
-      "flex-layout.row#specifications-title",
-      "product-specification-group#table",
-      "shelf.relatedProducts",
-      "product-reviews",
-      "product-questions-and-answers"
+      "shelf.relatedProducts"
     ]
   },
-  "flex-layout.row#specifications-title": {
-    "children": ["rich-text#specifications"]
-  },
-  "rich-text#specifications": {
-    "props": {
-      "text": "##### Product Specifications"
-    }
-  },
+
   "flex-layout.row#product-breadcrumb": {
     "props": {
       "marginTop": 4
     },
     "children": ["breadcrumb"]
   },
-  "flex-layout.row#description": {
-    "props": {
-      "marginBottom": 7
-    },
-    "children": ["product-description"]
-  },
+
   "condition-layout.product#availability": {
     "props": {
       "conditions": [
@@ -108,13 +91,73 @@
       "product-identifier.product",
       "sku-selector",
       "product-quantity",
-      "product-assembly-options",
-      "product-gifts",
       "flex-layout.row#buy-button",
       "availability-subscriber",
+      "disclosure-layout#description",
+      "disclosure-layout#specification",
       "shipping-simulator",
       "share#default"
     ]
+  },
+
+  "disclosure-layout#description": {
+    "children": [
+      "disclosure-trigger#description",
+      "disclosure-content#description"
+    ]
+  },
+  "disclosure-trigger#description": {
+    "children": [
+      "disclosure-state-indicator",
+      "rich-text#description"
+    ],
+    "props": {
+      "blockClass":"description"
+    }
+  },
+  "disclosure-content#description": {
+    "children": [
+      "product-description"
+    ],
+    "props": {
+      "blockClass":"description"
+    }
+  },
+  "rich-text#description":{
+    "props": {
+      "text":"Descrição",
+      "blockClass":"description"
+    }
+  },
+  
+  "disclosure-layout#specification": {
+    "children": [
+      "disclosure-trigger#specification",
+      "disclosure-content#specification"
+    ]
+  },
+  "disclosure-trigger#specification": {
+    "children": [
+      "disclosure-state-indicator",
+      "rich-text#specification"
+    ],
+    "props": {
+      "blockClass":"description"
+    }
+  },
+  "disclosure-content#specification": {
+    "children": [
+      "product-specification-group#table"
+    ],
+    "props": {
+      "blockClass":"description"
+    }
+  },
+  "rich-text#specification":{
+    "props": {
+      "text":"Como cuidar",
+      "blockClass":"description"
+    }
   },
 
   "flex-layout.row#product-name": {
@@ -178,6 +221,24 @@
         "WhatsApp": true,
         "Twitter": false,
         "Pinterest": true
+      }
+    }
+  },
+
+  "shelf.relatedProducts":{
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "props": {
+      "recommendation":"view",
+      "paginationDotsVisibility":"visible",
+      "hideOutOfStockItems": false,
+      "blockClass": ["shelf", "related-shelf"],
+      "productList": {
+        "maxItems": 12,
+        "showTitle": false,
+        "minItemsPerPage": 1,
+        "itemsPerPage": 4
       }
     }
   }

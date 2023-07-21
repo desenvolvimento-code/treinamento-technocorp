@@ -14,6 +14,9 @@
   font:13px "Amiko", sans-serif;
   padding:5px;
 }
+.searchBarContainer :global(.vtex-styleguide-9-x-input)::placeholder{
+  color:#fff;
+}
 
 .infoCardContainer--info-card-banners-middle-1{
   height:100%;

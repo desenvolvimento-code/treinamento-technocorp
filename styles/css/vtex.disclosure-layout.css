@@ -1,0 +1,13 @@
+.trigger--description{
+    text-transform:uppercase;
+    color:#3A3434;
+    font:13px "Amiko",sans-serif;
+    border:0;
+    width:100%;
+    background:#fff;
+    padding:19px 0 15px;
+    border-bottom:1px solid #F1A1A3;
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row-reverse;
+}

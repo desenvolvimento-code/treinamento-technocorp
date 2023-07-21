@@ -3,14 +3,15 @@
   font:28px "Amiko", sans-serif;
   margin:18px 0 24px;
 }
-
-
 .paragraph--notification-bar{
   color:#000;
   font:12px "Amiko", sans-serif;
   margin:9px 0 10px;
 }
-
+.paragraph--description{
+  margin:0;
+  text-transform:uppercase;
+}
 
 .container--deals {
   color: #ffffff;
