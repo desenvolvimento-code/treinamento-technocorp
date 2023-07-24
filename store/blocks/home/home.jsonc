@@ -44,10 +44,12 @@
     "props": {
       "text": "## Recomendamos para você",
       "blockClass": "shelfTitle"
-    }
+    },
+    "title": "Título da Prateleira"
   },
   "flex-layout.row#shelf": {
-    "children": ["list-context.product-list#shelf-home"]
+    "children": ["list-context.product-list#shelf-home"],
+    "title": "Prateleira da home"
   },
   "list-context.product-list#shelf-home": {
     "blocks": ["product-summary.shelf"],

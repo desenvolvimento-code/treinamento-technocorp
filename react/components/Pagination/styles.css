@@ -1,0 +1,44 @@
+.pagination--layout{
+    margin:20px 0;
+    gap: 16px;
+}
+.pagination--layout :global(.vtex-button){
+    border:0;
+    border-radius:0;
+    margin:0;
+    background:transparent !important;
+    border:1px solid #A2A2A2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+.pagination--layout :global(.vtex-button__label){
+    padding:12px 16px !important;
+    font-size:16px;
+    color:#666666 !important;
+    line-height:1;
+    transition:.5s ease all;
+}
+.pagination--layout :global(a.vtex-button) :global(.vtex-button__label):hover{color:#F3315D !important;}
+/* .pagination--layout :global(a.vtex-button):global(.c-on-disabled) :global(.vtex-button__label){
+    color:#A2A2A2 !important;
+} */
+.pagination--layout :global(.b--muted-5){
+    background:#DA251D !important;
+    border:1px solid #DA251D;
+    border-radius:50%;
+    color: #fff;
+}
+.pagination--layout :global(.b--muted-5) :global(.vtex-button__label){
+    color:#fff !important;
+}
+.pagination--layout div:first-child :global(.vtex-button__label),
+.pagination--layout div:last-child :global(.vtex-button__label){color:#A2A2A2 !important;}
+.pagination--layout div:first-child :global(.vtex-button__label):hover,
+.pagination--layout div:last-child :global(.vtex-button__label):hover{color:#F3315D !important;}
+
+/* MOBILE */
+@media screen and (max-width: 1025px) {
+    .pagination--layout :global(.vtex-button__label){
+        padding:10px 15px !important;
+    }
+}

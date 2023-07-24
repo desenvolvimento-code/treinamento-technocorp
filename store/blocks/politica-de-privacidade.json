@@ -1,0 +1,38 @@
+{
+  "store.custom#politica-de-privacidade": {
+    "blocks": [
+      "flex-layout.row#politica-de-privacidade"
+    ]
+  },
+
+  "flex-layout.row#politica-de-privacidade": {
+    "children": [
+      "flex-layout.col#politica-de-privacidade"
+    ]
+  },
+
+  "flex-layout.col#politica-de-privacidade": {
+    "children": [
+      "rich-text#title-politica-de-privacidade",
+      "rich-text#politica-de-privacidade"
+    ],
+    "props": {
+      "blockclass": "textColumn",
+      "preventVerticalStretch": true
+    }
+  },
+
+  "rich-text#title-politica-de-privacidade": {
+    "props": {
+      "text": "# Política de Privacidade",
+      "blockClass": "title"
+    }
+  },
+
+  "rich-text#politica-de-privacidade": {
+    "props": {
+      "text": "**Optimized store framework** \n Free your front-end with our React + Node store framework. Improve usability and SEO, while driving more conversion with modular components, single page applications, and a ready-for-PWA structure. \n **Multi-currency and language** \n Go international with multiple storefronts to support different languages and easily manage local currencies and payment conditions. \n **Serverless development platform** \n Reduce loading time, improve usability, and make the best out of SEO. Developing scalable components with a comprehensive, easy-to-use toolset, you can build stores faster than ever.",
+      "blockClass": "about"
+    }
+  }
+}
